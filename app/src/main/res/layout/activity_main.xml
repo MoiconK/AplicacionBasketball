@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <!-- No se importan datos de clase en este caso -->
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <!-- Texto para el título de la aplicación -->
+        <TextView
+            android:id="@+id/basketballScoreTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6100E9"
+            android:paddingStart="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/basketball_score_title"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Texto de equipo Local -->
+
+        <TextView
+            android:id="@+id/localView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/local_text"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:constraint_referenced_ids="basketballScoreTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/basketballScoreTitle" />
+
+        <!-- Texto de equipo visitante -->
+
+        <TextView
+            android:id="@+id/visitanteView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:text="@string/visitante_text"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:constraint_referenced_ids="basketballScoreTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoreVisitante" />
+
+        <!-- Contadores de puntuación -->
+
+        <TextView
+            android:id="@+id/scoreLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:textSize="56sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/localView" />
+
+        <TextView
+            android:id="@+id/scoreVisitante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:textSize="56sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/basketballImage" />
+
+        <!-- Botones para alterar la puntuación -->
+
+        <Button
+            android:id="@+id/minus_oneButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="124dp"
+            android:text="@string/minus_one"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/scoreLocal"
+            app:layout_constraintHorizontal_bias="0.442"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/basketballScoreTitle" />
+
+        <Button
+            android:id="@+id/minus_oneButtonVis"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="@string/minus_one"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/scoreVisitante"
+            app:layout_constraintHorizontal_bias="0.445"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/basketballImage" />
+
+        <Button
+            android:id="@+id/plus_oneButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:text="@string/plus_one"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toEndOf="@+id/scoreLocal"
+            app:layout_constraintTop_toBottomOf="@+id/basketballScoreTitle" />
+
+        <Button
+            android:id="@+id/plus_oneButtonVis"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/plus_one"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toEndOf="@+id/scoreVisitante"
+            app:layout_constraintTop_toBottomOf="@+id/basketballImage" />
+
+        <Button
+            android:id="@+id/plus_twoButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/plus_two"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toEndOf="@+id/scoreLocal"
+            app:layout_constraintTop_toBottomOf="@+id/plus_oneButton" />
+
+        <Button
+            android:id="@+id/plus_twoButtonVis"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/plus_two"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toEndOf="@+id/scoreVisitante"
+            app:layout_constraintTop_toBottomOf="@+id/plus_oneButtonVis" />
+
+        <Button
+            android:id="@+id/resetButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="108dp"
+            android:text="@string/reset"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/basketballImage"
+            app:layout_constraintHorizontal_bias="0.693"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minus_oneButton" />
+
+        <!-- Imagen de la pelota de baloncesto -->
+
+        <ImageView
+            android:id="@+id/basketballImage"
+            android:layout_width="124dp"
+            android:layout_height="107dp"
+            android:layout_marginTop="68dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scoreLocal"
+            app:srcCompat="@drawable/basketball" />
+
+        <!-- Botón para pasar a la pantalla final de resultado -->
+
+        <Button
+            android:id="@+id/resultButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:text="@string/result"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.216"
+            app:layout_constraintStart_toEndOf="@+id/basketballImage"
+            app:layout_constraintTop_toBottomOf="@+id/plus_twoButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

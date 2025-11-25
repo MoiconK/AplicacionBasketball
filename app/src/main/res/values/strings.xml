@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AplicacionBasketball</string>
+    <string name="basketball_score_title">Basketball Score</string>
+    <string name="local_text">Local</string>
+    <string name="minus_one">-1</string>
+    <string name="plus_one">+1</string>
+    <string name="plus_two">+2</string>
+    <string name="reset">⟳</string>
+    <string name="result"><![CDATA[>]]></string>
+    <string name="visitante_text">Visitante</string>
+    <string name="ganador">Ganó el equipo %1$s 😃</string>
+    <string name="empate">Fué un empate 😕</string>
+    <string name="local_visitante">Local - Visitante</string>
+</resources>
